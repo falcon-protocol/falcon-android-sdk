@@ -2,7 +2,7 @@
 
 The Falcon Android SDK lets you embed inline ad placements inside your Android app. Placements are rendered in a self-sizing WebView-backed view that drives its own height to match the rendered content and fires lifecycle callbacks to your app. The SDK mirrors the Falcon iOS SDK surface, so teams integrating both platforms find the same API shape.
 
-Full integration guide: [docs.falconprotocol.com/integration-guide/android](https://docs.falconprotocol.com/integration-guide/android)
+Full integration guide: [falcon-protocol/docs-ecommerce — integration-guide/android](https://github.com/falcon-protocol/docs-ecommerce/blob/main/integration-guide/android.md)
 
 ---
 
@@ -172,8 +172,8 @@ Falcon.execute(
 Use the `style` parameter to customise placement colours and typography. All fields are optional; omitting a field leaves the placement default in place.
 
 ```kotlin
+import android.graphics.Color
 import us.falconlabs.falcon.FalconStyle
-import androidx.core.graphics.toColorInt
 
 Falcon.execute(
     attributes = attributes,
@@ -182,9 +182,9 @@ Falcon.execute(
         widgetBackgroundColor       = 0x00000000.toInt(), // transparent
         slotBackgroundColor         = 0xFFFFFFFF.toInt(), // white
         slotPadding                 = 8,
-        acceptButtonBackgroundColor = "#008363".toColorInt(),
+        acceptButtonBackgroundColor = Color.parseColor("#008363"),
         acceptButtonTextColor       = 0xFFFFFFFF.toInt(), // white
-        promoCodeBackgroundColor    = "#2DA784".toColorInt(),
+        promoCodeBackgroundColor    = Color.parseColor("#2DA784"),
         fontFamily                  = "Roboto",
     ),
 )
