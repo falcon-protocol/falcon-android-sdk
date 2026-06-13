@@ -2,7 +2,7 @@
 
 The Falcon Android SDK lets you embed inline ad placements inside your Android app. Placements are rendered in a self-sizing WebView-backed view that drives its own height to match the rendered content and fires lifecycle callbacks to your app. The SDK mirrors the Falcon iOS SDK surface, so teams integrating both platforms find the same API shape.
 
-Full integration guide: [falcon-protocol/docs-ecommerce — integration-guide/android](https://github.com/falcon-protocol/docs-ecommerce/blob/main/integration-guide/android.md)
+Full integration guide: [docs.falconlabs.com/integration-guide/android](https://docs.falconlabs.com/integration-guide/android)
 
 ---
 
