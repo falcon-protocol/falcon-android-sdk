@@ -1,0 +1,87 @@
+Falcon Labs SDK License Agreement
+
+Copyright (c) 2026 Falcon Labs. All rights reserved.
+
+This Falcon Labs SDK License Agreement (the "Agreement") governs your use of
+the Falcon Android SDK, including the binary artifacts distributed under the
+Maven coordinates "us.falconlabs:*", the contents of this repository, and any
+accompanying documentation (collectively, the "SDK"). By downloading,
+installing, or using the SDK, you agree to be bound by this Agreement. If you
+are using the SDK on behalf of an organization, you represent that you have
+authority to bind that organization.
+
+1. LICENSE GRANT. Subject to your compliance with this Agreement and with any
+   services agreement between you and Falcon Labs, Falcon Labs grants you a
+   limited, non-exclusive, non-transferable, revocable, royalty-free license
+   to (a) integrate the SDK, in unmodified binary form, into your own
+   applications that interoperate with Falcon Labs services, and (b)
+   distribute the SDK solely as embedded within such applications.
+
+2. RESTRICTIONS. Except as expressly permitted by this Agreement or by
+   applicable law notwithstanding this restriction, you will not, and will
+   not permit any third party to: (a) modify, adapt, translate, or create
+   derivative works of the SDK; (b) decompile, disassemble, or otherwise
+   reverse engineer the SDK; (c) distribute, sell, sublicense, rent, or lease
+   the SDK on a standalone basis; (d) remove, obscure, or alter any
+   proprietary notices in or on the SDK; (e) use the SDK to develop a product
+   or service that competes with Falcon Labs services; or (f) use the SDK
+   other than in connection with Falcon Labs services under a valid
+   arrangement with Falcon Labs.
+
+3. OWNERSHIP. The SDK is licensed, not sold. Falcon Labs and its licensors
+   retain all right, title, and interest in and to the SDK, including all
+   intellectual property rights. No rights are granted except as expressly
+   set out in this Agreement.
+
+4. SERVICES AND DATA. The SDK connects to Falcon Labs services. Your use of
+   those services, and of any data transmitted through the SDK, is governed
+   by your services agreement with Falcon Labs and by applicable law. You are
+   solely responsible for providing any notices to, and obtaining any
+   consents from, end users of your applications that are required by
+   applicable law in connection with your use of the SDK.
+
+5. UPDATES. Falcon Labs may release updated versions of the SDK from time to
+   time. Falcon Labs may modify or discontinue the services the SDK depends
+   on, and older SDK versions may cease to function. This Agreement applies
+   to any SDK updates you use unless the update is accompanied by a separate
+   license.
+
+6. TERMINATION. This Agreement is effective until terminated. It terminates
+   automatically if you breach any of its terms. Falcon Labs may also
+   terminate it upon notice if your arrangement with Falcon Labs ends. Upon
+   termination you must stop using the SDK in new development and new
+   distributions; copies of the SDK already embedded in applications
+   distributed to end users before termination may remain in those
+   applications. Sections 2 through 9 survive termination.
+
+7. DISCLAIMER OF WARRANTY. THE SDK IS PROVIDED "AS IS" AND "AS AVAILABLE",
+   WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING WITHOUT
+   LIMITATION ANY WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR
+   PURPOSE, TITLE, AND NON-INFRINGEMENT. FALCON LABS DOES NOT WARRANT THAT
+   THE SDK WILL BE ERROR-FREE OR OPERATE WITHOUT INTERRUPTION.
+
+8. LIMITATION OF LIABILITY. TO THE MAXIMUM EXTENT PERMITTED BY LAW, IN NO
+   EVENT WILL FALCON LABS BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL,
+   CONSEQUENTIAL, EXEMPLARY, OR PUNITIVE DAMAGES, OR FOR ANY LOSS OF PROFITS,
+   REVENUE, DATA, OR GOODWILL, ARISING OUT OF OR RELATED TO THIS AGREEMENT OR
+   THE SDK, HOWEVER CAUSED AND UNDER ANY THEORY OF LIABILITY, EVEN IF ADVISED
+   OF THE POSSIBILITY OF SUCH DAMAGES. FALCON LABS' AGGREGATE LIABILITY
+   ARISING OUT OF OR RELATED TO THIS AGREEMENT WILL NOT EXCEED ONE HUNDRED
+   U.S. DOLLARS (USD 100) OR THE MINIMUM AMOUNT PERMITTED BY APPLICABLE LAW,
+   WHICHEVER IS GREATER.
+
+9. COMPLIANCE. You will comply with all applicable laws and regulations in
+   your use of the SDK, including export control, sanctions, and privacy
+   laws.
+
+10. GENERAL. This Agreement is the entire agreement between you and Falcon
+    Labs regarding the SDK and supersedes any prior understandings regarding
+    the SDK, provided that if you have a separately negotiated, signed
+    agreement with Falcon Labs that covers the SDK, that agreement controls
+    to the extent of any conflict. If any provision of this Agreement is held
+    unenforceable, the remaining provisions remain in full force. Falcon Labs
+    may update this Agreement for future SDK versions; the version of the
+    Agreement accompanying the SDK version you use governs your use of that
+    version.
+
+Questions about this Agreement: dev@falconlabs.us
