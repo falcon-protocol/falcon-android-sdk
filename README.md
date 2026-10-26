@@ -30,7 +30,7 @@ dependencyResolutionManagement {
 
 // app/build.gradle.kts
 dependencies {
-    implementation("us.falconlabs:falcon:1.1.0")
+    implementation("us.falconlabs:falcon:1.3.0")
 }
 ```
 
@@ -155,6 +155,25 @@ Falcon.execute(
     isSandbox                     = false,
 )
 ```
+
+---
+
+## Release a Placement
+
+Call `release()` when you remove a `FalconEmbeddedView` from your layout or no longer need it (for example in `onDestroyView`, or when a RecyclerView item is recycled). Available from 1.3.0.
+
+```kotlin
+override fun onDestroyView() {
+    falconView.release()
+    super.onDestroyView()
+}
+```
+
+`release()` detaches the bridge, stops loading, destroys the WebView and collapses the view to height 0. After it returns, no callback or event fires for that placement, except `onShouldHideLoadingIndicator` if the loading indicator is still showing (so show and hide stay paired). `onUnload` and `PlacementCompleted` do not fire, because removal by the host is not placement completion.
+
+It is safe to call at any time, more than once, and from inside SDK callbacks. The view stays reusable: a later `execute(...)` starts a fresh placement.
+
+The view does not release itself on `onDetachedFromWindow`, because detach also happens during temporary re-parenting. Compose hosts need nothing: `FalconEmbedded` calls `release()` when it leaves the composition.
 
 ---
 
@@ -339,7 +358,9 @@ key(userId) {
 - **Link handling:** user taps on placement links open in Chrome Custom Tabs. Other URL schemes are dispatched via `ACTION_VIEW` (deep links). Dangerous schemes (e.g. `javascript:`) are blocked and silently dropped.
 - **Navigation policy:** navigation away from the placement's origin inside the WebView is blocked. The placement runs entirely within its own origin.
 - **Click gesture gate:** click events from ad content are honored only within a short window after a genuine user touch on the ad view. Remote content cannot silently open browsers or deep links without a real interaction.
-- **Reserved JS interface:** the JavaScript interface name `Android` is used by the SDK's bridge inside the placement WebView. Do not register a JavaScript interface with this name on the same WebView.
+- **Origin-scoped bridge:** on WebView 77 and later, the SDK's `window.Android` bridge is injected only into frames from the placement's own origin. Third-party iframes inside ad content cannot see or call it. Older WebViews fall back to a bridge visible to all frames. If no secure attachment is possible, the placement fails with `onError` instead. The name `Android` is reserved: do not register your own JavaScript interface or message listener with this name on the placement WebView.
+- **WebView storage:** on WebView 119 and later, placements run in a dedicated WebView profile (`us.falconlabs.falcon`) with its own cookies and storage, isolated from your app's own WebViews in both directions. The profile's data is wiped when the last placement is torn down. On older WebViews, third-party cookies are disabled and ad cookies share the app-wide cookie jar. In both modes, per-view cache and history are cleared on teardown.
+- **Re-executing from callbacks:** you can call `execute` again from inside `onUnload`, `onError` or an event handler. If you do it from `onUnload` or a `PlacementCompleted` handler, the previous placement's `PlacementCompleted` event may arrive after the new placement starts. Events carry no placement identity, so do not treat that event as the new placement's completion.
 - **WebView debugging:** the SDK never enables WebView debugging. To inspect placements via `chrome://inspect`, call `WebView.setWebContentsDebuggingEnabled(true)` in your own debug builds (it is an app-global flag, so it is your call to make).
 - **R8/ProGuard:** no host configuration needed — the AAR ships a consumer rule that keeps the JS-interface method.
 
