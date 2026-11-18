@@ -1,0 +1,115 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "us.falconlabs",
+    "module": "falcon",
+    "version": "1.4.0",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.14.2"
+    }
+  },
+  "variants": [
+    {
+      "name": "releaseVariantReleaseApiPublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "2.1.21"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "falcon-1.4.0.aar",
+          "url": "falcon-1.4.0.aar",
+          "size": 95285,
+          "sha512": "18e6d8b2c54bf4f5a5ef2c5b1ca550b64eca8bbf77826bc50363f09626575db1b44a59fe9c6e9d9b6375a5ee149a050acc70b2eabeba563564d99c29500cd9dc",
+          "sha256": "16f9fa7d58a6315c8827be6575d6c74418c310543cd838c621360df366bde296",
+          "sha1": "f2f86222f37b5fb36e11c92a8ddae26f0b9cc792",
+          "md5": "15d41563680c2095debf4da7c90d01df"
+        }
+      ]
+    },
+    {
+      "name": "releaseVariantReleaseRuntimePublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "androidx.annotation",
+          "module": "annotation",
+          "version": {
+            "requires": "1.9.1"
+          }
+        },
+        {
+          "group": "androidx.browser",
+          "module": "browser",
+          "version": {
+            "requires": "1.8.0"
+          }
+        },
+        {
+          "group": "androidx.webkit",
+          "module": "webkit",
+          "version": {
+            "requires": "1.16.0"
+          }
+        },
+        {
+          "group": "androidx.compose",
+          "module": "compose-bom",
+          "version": {
+            "requires": "2025.03.01"
+          },
+          "attributes": {
+            "org.gradle.category": "platform"
+          }
+        },
+        {
+          "group": "androidx.compose.ui",
+          "module": "ui"
+        },
+        {
+          "group": "androidx.compose.foundation",
+          "module": "foundation"
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "2.1.21"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "falcon-1.4.0.aar",
+          "url": "falcon-1.4.0.aar",
+          "size": 95285,
+          "sha512": "18e6d8b2c54bf4f5a5ef2c5b1ca550b64eca8bbf77826bc50363f09626575db1b44a59fe9c6e9d9b6375a5ee149a050acc70b2eabeba563564d99c29500cd9dc",
+          "sha256": "16f9fa7d58a6315c8827be6575d6c74418c310543cd838c621360df366bde296",
+          "sha1": "f2f86222f37b5fb36e11c92a8ddae26f0b9cc792",
+          "md5": "15d41563680c2095debf4da7c90d01df"
+        }
+      ]
+    }
+  ]
+}
