@@ -30,7 +30,7 @@ dependencyResolutionManagement {
 
 // app/build.gradle.kts
 dependencies {
-    implementation("us.falconlabs:falcon:1.3.0")
+    implementation("us.falconlabs:falcon:1.4.0")
 }
 ```
 
